@@ -5,9 +5,9 @@ import java.util.List;
 
 public interface MachineService<T extends Machine> {
 
-    <T extends Machine> List<T> getAll(Class<? extends T> type);
+    List<T> getAll(Class<? extends T> type);
 
-    <T extends Machine> void fill(List<? super T> machines, T value);
+    void fill(List<? super T> machines, T value);
 
-    void startWorking(List<? extends Machine> machines);
+    void startWorking(List<? extends T> machines);
 }
